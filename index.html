@@ -13,12 +13,74 @@
         <h1>Emilio Arias</h1>
       </div>
       <div class="city-list"></div>
-      <div class="info-container">
-        <div class="data-shower"></div>
+    </div>
+    <div class="info-container">
+      <div class="data-shower">
+        <div class="city-info">
+          <h2 class="selected_city">New York</h2>
+        </div>
+        <div class="table-container">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="target">No</th>
+                <th class="today-info">Today</th>
+                <th class="tomorrow-info">Tomorrow</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="target">Sunrise</td>
+                <td id="today_sunrise"></td>
+                <td id="tomorrow_sunrise"></td>
+              </tr>
+              <tr>
+                <td class="target">Sunset</td>
+                <td id="today_sunset"></td>
+                <td id="tomorrow_sunset"></td>
+              </tr>
+              <tr>
+                <td class="target">Dawn</td>
+                <td id="today_dawn"></td>
+                <td id="tomorrow_dawn"></td>
+              </tr>
+              <tr>
+                <td class="target">Dusk</td>
+                <td id="today_dusk"></td>
+                <td id="tomorrow_dusk"></td>
+              </tr>
+              <tr>
+                <td class="target">Day Length</td>
+                <td id="today_day_length"></td>
+                <td id="tomorrow_day_length"></td>
+              </tr>
+              <tr>
+                <td class="target">Solar Noon</td>
+                <td id="today_solar_noon"></td>
+                <td id="tomorrow_solar_noon"></td>
+              </tr>
+              <tr>
+                <td class="target">Timezone</td>
+                <td id="today_timezone"></td>
+                <td id="tomorrow_timezone"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-    <div class="table-container">
-      <table class="table table-striped"></table>
+    <div class="clock-container">
+      <div class="clock">
+        <div id="Date"></div>
+        <ul>
+          <li id="hours"></li>
+          <li id="point">:</li>
+          <li id="min"></li>
+          <li id="point">:</li>
+          <li id="sec"></li>
+        </ul>
+      </div>
     </div>
   </body>
+  <script type="text/javascript" src="./assets/js/index.js"></script>
 </html>
