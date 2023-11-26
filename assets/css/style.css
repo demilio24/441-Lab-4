@@ -1,0 +1,205 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: url("../img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+  font: bold 12px Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-width: 960px;
+  color: #bbbbbb;
+}
+
+a {
+  text-decoration: none;
+  color: #00c6ff;
+}
+
+h1 {
+  font: 4em normal Arial, Helvetica, sans-serif;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+h1 small {
+  font: 0.2em normal Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 5em;
+  display: block;
+}
+
+h2 {
+  font-weight: 700;
+  color: #bbb;
+  font-size: 20px;
+}
+
+h2,
+p {
+  margin-bottom: 10px;
+}
+
+@font-face {
+  font-family: "BebasNeueRegular", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.clock-container {
+  position: fixed;
+  bottom: 5%;
+  left: 11%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.clock {
+  margin: 0 auto;
+  padding: 30px;
+  /* border: 1px solid #333; */
+  color: #fff;
+}
+
+#Date {
+  font-family: "BebasNeueRegular", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  text-shadow: 0 0 5px #ff7300;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0px;
+  list-style: none;
+  text-align: center;
+}
+ul li {
+  display: inline;
+  font-size: 4em;
+  text-align: center;
+  font-family: "BebasNeueRegular", Arial, Helvetica, sans-serif;
+  text-shadow: 0 0 5px #ff7300;
+}
+
+#point {
+  position: relative;
+  -moz-animation: mymove 1s ease infinite;
+  -webkit-animation: mymove 1s ease infinite;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@-webkit-keyframes mymove {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 20px #ff7300;
+  }
+  50% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 20px #ff7300;
+  }
+}
+
+@-moz-keyframes mymove {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 20px #ff7300;
+  }
+  50% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 20px #ff7300;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #00000050;
+  margin-bottom: 50px;
+  /* border-bottom: 1px solid #e2e2e2; */
+}
+
+.info-container {
+  width: 50%;
+  float: right;
+  display: block !important;
+}
+
+.city-list {
+  padding: 45px 50px 0 0;
+  /* margin-left: auto;
+    margin-right: auto;
+    padding-right: 20px; */
+  font-size: 18px;
+  color: white;
+  /* text-shadow: 0 0 3px #ff7300; */
+}
+
+.data-input {
+  width: 150px;
+  height: 30px;
+  outline: none;
+  border-radius: 6px;
+  border: 1px solid #b4b4b4;
+  padding: 2px 3px 2px 3px;
+  font-size: 20px;
+}
+
+.data-shower {
+  color: white;
+  font-size: 15px;
+  margin-top: 20px;
+  width: 90%;
+  background-color: #ffffff20;
+  border-radius: 10px;
+  border: 1px solid #919191;
+}
+
+.table-striped {
+  color: #bbb;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+
+tr {
+  height: 40px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.target {
+  text-align: right;
+}
+
+.today-info,
+.tomorrow-info {
+  width: 40%;
+}
+
+.city-info {
+  text-align: center;
+  height: 40px;
+}
+
+.cities {
+  cursor: pointer;
+}
+
+.table-container {
+  width: 100%;
+}
