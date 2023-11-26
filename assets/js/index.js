@@ -52,3 +52,59 @@ let Clock = {
     }, 1000);
   },
 };
+
+let SunRise = {
+  init: function () {
+    SunRise.setup();
+    SunRise.events();
+
+    let geolocation = navigator.geolocation;
+
+    geolocation.getCurrentPosition(
+      function (position) {
+        let lat = position.coords.latitude;
+        let lng = position.coords.longitude;
+        getTime("", lat, lng);
+      },
+      function (error) {
+        console.log(error);
+      }
+    );
+  },
+
+  setup: function () {
+    let html = "";
+
+    for (let index = 0; index < locationData.length; index++) {
+      const location = locationData[index];
+      html +=
+        (index ? " | " : "") +
+        '<span class="cities" data-id="' +
+        location._id +
+        '" data-name="' +
+        location.city_name +
+        '" data-lat="' +
+        location.lat +
+        '"  data-lng="' +
+        location.lng +
+        '">' +
+        location.city_name +
+        "</span>";
+    }
+    $(".city-list").html(html);
+  },
+
+  events: function () {
+    $(".cities").on("click", function () {
+      let name = $(this).data("name");
+      let lat = $(this).data("lat");
+      let lng = $(this).data("lng");
+      getTime(name, lat, lng);
+    });
+  },
+};
+
+$(document).ready(function () {
+  Clock.init();
+  SunRise.init();
+});
